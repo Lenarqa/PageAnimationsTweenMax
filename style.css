@@ -1,3 +1,127 @@
-body{
-    background: url(car.webp);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hamburger{
+    grid-column: 3;
+    margin: 12px 6px;
+    justify-self: end;
+}
+/* header */
+.hamburger,
+.hamburger::after,
+.hamburger::before{
+    position: relative;
+    display: block;
+    content: "";
+    height: 3px;
+    width: 20px;
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.hamburger::after{
+    width: 12px;
+    top: 5px;
+}
+
+.hamburger::before{
+    width: 28px;
+    top: -8px;
+}
+
+.hamburger:hover{
+    width: 28px;
+    background-color: orangered;
+}
+
+.hamburger:hover::after,
+.hamburger:hover::before{
+    width: 28px;
+    background-color: orangered;
+}
+
+
+nav{
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    min-height: 10%;
+    align-items: center;
+    /* color: #fff; */
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem; */
+}
+
+#logo{
+    grid-column: 2;
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+}
+
+#logo:hover{
+    color: orangered;
+}
+
+.slider{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left, #ba7453, #d1a984);
+    z-index: -1;
+}
+
+/* hero section */
+
+
+section{
+    width: 100%;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.hero{
+    position: relative;
+    height: 60%;
+    width: 100%;
+}
+
+.hero img{
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headline{
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    font-size: 4rem;
+    transform: translate(-20%, -70% );
+    color: #fff;
+    z-index: 2;
+}
+
+.hero::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .3;
+
 }
